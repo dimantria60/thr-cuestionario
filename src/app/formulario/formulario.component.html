@@ -1,0 +1,214 @@
+<div class="form-container">
+
+  <form [formGroup]="question" (ngSubmit)="onSubmit()">
+    <div class="personal-data">
+      <h4>Información de Contacto</h4>
+      <div class="form-group">
+        <label>
+          <span> Nombre Completo <span class="text-danger">*</span></span
+          ><br />
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span> Dirección <span class="text-danger">*</span></span
+          ><br />
+          <input
+            type="text"
+            class="form-control"
+            formControlName="adress"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span> Telefono <span class="text-danger">*</span></span
+          ><br />
+          <input
+            type="number"
+            class="form-control"
+            formControlName="phone"
+            required
+          />
+        </label>
+      </div>
+    </div>
+    <div class="question-data">
+      <h4>Preguntas relevantes</h4>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 1: ¿Estado Civil?<span class="text-danger">*</span></span
+          >
+          <select class="form-select" formControlName="pregunta1" required>
+            <option selected>Selecciona estado civil</option>
+            <option value="soltero">Soltero</option>
+            <option value="casado">Casado</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 2: ¿Es el único proveedor dentro de su hogar?<span
+              class="text-danger"
+              >*</span
+            ></span
+          ><br />
+          <span> Si la respuesta es no especifique quien lo es</span>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta2"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 3: ¿A qué se dedica?
+            <span class="text-danger">*</span></span
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta3"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 4: ¿Cuánto tiempo lleva trabajando en ese lugar?
+            <span class="text-danger">*</span></span
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta4"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 5: ¿Cuál o cuáles han sido sus trabajos anteriores?<span
+              class="text-danger"
+              >*</span
+            >
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta5"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 6: ¿Por qué dejo de trabajar en ellos?
+            <span class="text-danger">*</span></span
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta6"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 7: ¿Cuánto tiempo lleva viviendo en su casa actual?<span
+              class="text-danger"
+              >*</span
+            >
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta7"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 8: ¿Tiene casa propia o renta?
+            <span class="text-danger">*</span></span
+          >
+          <select class="form-select" formControlName="pregunta8" required>
+            <option selected>Selecciona opcion</option>
+            <option value="renta">Renta</option>
+            <option value="propia">Casa propia</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="credit-about">
+      <h4>A cerca de el crédito</h4>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 9: ¿A tenido o adquirido algún crédito alguna vez?<span
+              class="text-danger"
+              >*</span
+            >
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta9"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 10: ¿Como eran sus formas de pago?
+            <span class="text-danger">*</span></span
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta10"
+            required
+          />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>
+          <span
+            >Pregunta 11: ¿Se le explica cómo son nuestros créditos y nuestras
+            formas de pagos ?<span class="text-danger">*</span>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pregunta11"
+            required
+          />
+        </label>
+      </div>
+    </div>
+    <button [disabled]="question.invalid" type="submit" class="btn btn-success">
+      Enviar Solicitud
+    </button>
+  </form>
+</div>

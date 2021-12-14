@@ -1,0 +1,88 @@
+<div class="clients-container">
+  <div class="tittle-contain">
+    <h1>Clientes Registrados</h1>
+  </div>
+  <div class="data-container">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item" *ngFor="let client of data">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+            aria-expanded="false"
+            aria-controls="flush-collapseOne"
+          >
+            {{ client.name }} <br />
+            {{ client.createdAt | date: "medium" }}
+          </button>
+        </h2>
+        <div
+          id="flush-collapseOne"
+          class="accordion-collapse collapse"
+          aria-labelledby="flush-headingOne"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div class="accordion-body">
+            <span class="accordion-title">Dirección</span>
+            <br />
+            {{ client.adress }}<br />
+            <span class="accordion-title">Telefono</span> <br />
+            {{ client.phone }} <br />
+            <span class="accordion-title">Pregunta 1: ¿Estado Civil? </span
+            ><br />
+            {{ client.pregunta1 }} <br />
+            <span class="accordion-title"
+              >Pregunta 2: ¿Es el único proveedor dentro de su hogar? </span
+            ><br />{{ client.pregunta2 }}
+            <br />
+            <span class="accordion-title">Pregunta 3: ¿A qué se dedica?</span>
+            <br />{{ client.pregunta3 }} <br />
+            <span class="accordion-title"
+              >Pregunta 4: ¿Cuánto tiempo lleva trabajando en ese lugar?</span
+            ><br />{{ client.pregunta4 }}
+            <br />
+            <span class="accordion-title"
+              >Pregunta 5: ¿Cuál o cuáles han sido sus trabajos
+              anteriores?</span
+            >
+            <br />{{ client.pregunta5 }} <br />
+            <span class="accordion-title"
+              >Pregunta 6: ¿Por qué dejo de trabajar en ellos?</span
+            >
+            <br />{{ client.pregunta6 }}
+            <br />
+            <span class="accordion-title"
+              >Pregunta 7: ¿Cuánto tiempo lleva viviendo en su casa
+              actual?</span
+            >
+            <br />{{ client.pregunta7 }}
+            <br />
+            <span class="accordion-title"
+              >Pregunta 8: ¿Tiene casa propia o renta?</span
+            >
+            <br />{{ client.pregunta8 }}
+            <br />
+            <span class="accordion-title"
+              >Pregunta 9: ¿A tenido o adquirido algún crédito alguna vez?</span
+            >
+            <br />{{ client.pregunta9 }}
+            <br />
+            <span class="accordion-title"
+              >Pregunta 10: ¿Como eran sus formas de pago?</span
+            >
+            <br />{{ client.pregunta10 }}
+            <br />
+            <span class="accordion-title"
+              >Pregunta 11: ¿Se le explica cómo son nuestros créditos y nuestras
+              formas de pagos ?</span
+            >
+            <br />{{ client.pregunta11 }}
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
